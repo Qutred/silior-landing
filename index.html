@@ -3,230 +3,1128 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Silior Store | Елітні парфуми за доступною ціною</title>
-    <link rel="stylesheet" href="style.css" />
-    <!-- Google Fonts -->
+    <title>silior.store — Оригінальні парфуми за доступною ціною</title>
+    <meta
+      name="description"
+      content="Оригінальні парфуми Zara, Pink, Victoria's Secret за найкращими цінами. Швидка доставка по Україні."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Playfair+Display:ital,wght@0,700;1,400&display=swap"
       rel="stylesheet"
     />
-    <!-- AOS Animation Library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- Header -->
-    <header id="header">
-      <div class="container header-flex">
-        <div class="logo">SILIOR<span>.STORE</span></div>
-        <nav>
-          <ul class="nav-links">
-            <li><a href="#about">Про нас</a></li>
-            <li><a href="#catalog">Каталог</a></li>
-            <li><a href="#faq">FAQ</a></li>
-            <li><a href="#contacts">Контакти</a></li>
-          </ul>
+    <!-- ============================================================
+       HEADER — sticky navigation
+  ============================================================ -->
+    <header class="header" id="header">
+      <div class="header__inner">
+        <a class="logo" href="#home">
+          <span class="logo__icon">✦</span>
+          <span class="logo__text"
+            >silior<span class="logo__dot">.store</span></span
+          >
+        </a>
+
+        <nav class="nav" id="nav">
+          <a class="nav__link" href="#home">Головна</a>
+          <a class="nav__link" href="#products">Продукти</a>
+          <a class="nav__link" href="#why">Чому ми</a>
+          <a class="nav__link" href="#reviews">Відгуки</a>
+          <a class="nav__link" href="#how-to-order">Як замовити</a>
+          <a class="nav__link" href="#faq">FAQ</a>
+          <a class="nav__link" href="#contacts">Контакти</a>
         </nav>
-        <div class="header-icons">
+
+        <div class="header__actions">
           <a
+            class="btn btn--instagram"
             href="https://www.instagram.com/silior.store/"
             target="_blank"
-            class="insta-btn"
-            >Instagram</a
+            rel="noopener"
           >
+            <svg
+              class="btn__icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                x="2"
+                y="2"
+                width="20"
+                height="20"
+                rx="5"
+                stroke="currentColor"
+                stroke-width="1.8"
+              />
+              <circle
+                cx="12"
+                cy="12"
+                r="4.5"
+                stroke="currentColor"
+                stroke-width="1.8"
+              />
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" />
+            </svg>
+            Instagram
+          </a>
+          <button class="burger" id="burger" aria-label="Меню">
+            <span></span><span></span><span></span>
+          </button>
         </div>
       </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="container">
-        <div class="hero-content" data-aos="fade-up">
-          <p class="subtitle">LUXURY ACCESSIBLE TO EVERYONE</p>
-          <h1>Мистецтво аромату за чесною ціною</h1>
-          <p class="description">
-            Ваші улюблені аромати від Zara, Pink та Victoria's Secret тепер
-            доступні кожному. Оригінальна якість без переплат за бренд.
-          </p>
-          <a href="#catalog" class="btn-primary">Переглянути каталог</a>
+    <!-- ============================================================
+       HERO SECTION — full screen
+  ============================================================ -->
+    <section class="hero" id="home">
+      <!-- Animated background orbs -->
+      <div class="hero__bg">
+        <div class="orb orb--1"></div>
+        <div class="orb orb--2"></div>
+        <div class="orb orb--3"></div>
+        <div class="orb orb--4"></div>
+      </div>
+
+      <!-- Floating particles -->
+      <div class="particles" id="particles"></div>
+
+      <!-- Decorative lines -->
+      <div class="hero__lines">
+        <div class="hero__line hero__line--1"></div>
+        <div class="hero__line hero__line--2"></div>
+      </div>
+
+      <div class="hero__content">
+        <div class="hero__badge">
+          <span class="hero__badge-dot"></span>
+          Zara · Pink · Victoria's Secret
+        </div>
+        <h1 class="hero__title">
+          <span class="hero__title-line">Оригінальні</span>
+          <em class="hero__title-em">парфуми</em>
+          <span class="hero__title-line hero__title-line--sm"
+            >за доступною ціною</span
+          >
+        </h1>
+        <p class="hero__sub">
+          Найкращі аромати від світових брендів — без переплат.<br />
+          Доставка по всій Україні за 1–2 дні.
+        </p>
+        <div class="hero__actions">
+          <a
+            class="btn btn--primary btn--lg"
+            href="https://www.instagram.com/silior.store/"
+            target="_blank"
+            rel="noopener"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+            >
+              <rect
+                x="2"
+                y="2"
+                width="20"
+                height="20"
+                rx="5"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <circle
+                cx="12"
+                cy="12"
+                r="4.5"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" />
+            </svg>
+            Перейти в Instagram
+          </a>
+          <a class="btn btn--ghost btn--lg" href="#products">
+            Переглянути каталог
+          </a>
+        </div>
+
+        <!-- Trust stats -->
+        <div class="hero__stats">
+          <div class="hero__stat">
+            <span class="hero__stat-num">500+</span>
+            <span class="hero__stat-label">Задоволених клієнтів</span>
+          </div>
+          <div class="hero__stat-divider"></div>
+          <div class="hero__stat">
+            <span class="hero__stat-num">1–2 дні</span>
+            <span class="hero__stat-label">Швидка доставка</span>
+          </div>
+          <div class="hero__stat-divider"></div>
+          <div class="hero__stat">
+            <span class="hero__stat-num">100%</span>
+            <span class="hero__stat-label">Оригінальна якість</span>
+          </div>
         </div>
       </div>
-      <div class="hero-image" data-aos="fade-left">
-        <img
-          src="https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&q=80&w=1000"
-          alt="Perfume Bottle"
-        />
+
+      <!-- Scroll indicator -->
+      <div class="hero__scroll">
+        <span class="hero__scroll-text">Гортати вниз</span>
+        <div class="hero__scroll-line"></div>
       </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="features">
-      <div class="container grid-3">
-        <div class="feature-item" data-aos="fade-up" data-aos-delay="100">
-          <span class="icon">💸</span>
-          <h3>Найкраща ціна</h3>
-          <p>
-            Ми працюємо напряму, щоб ви отримували парфуми без зайвих націнок.
+    <!-- ============================================================
+       PRODUCT GRID SECTION — animated columns
+  ============================================================ -->
+    <section class="products" id="products">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Наш асортимент</span>
+          <h2 class="section-title">Колекція ароматів</h2>
+          <p class="section-sub">
+            Відкрийте для себе аромати від найкращих брендів за неперевершеними
+            цінами
           </p>
         </div>
-        <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
-          <span class="icon">✨</span>
-          <h3>Топ бренди</h3>
-          <p>Zara, Pink, Victoria's Secret — лише те, що зараз в тренді.</p>
+
+        <!-- Brand tabs -->
+        <div class="brand-tabs reveal">
+          <button class="brand-tab active" data-brand="all">Всі</button>
+          <button class="brand-tab" data-brand="zara">Zara</button>
+          <button class="brand-tab" data-brand="pink">Pink</button>
+          <button class="brand-tab" data-brand="vs">Victoria's Secret</button>
         </div>
-        <div class="feature-item" data-aos="fade-up" data-aos-delay="300">
-          <span class="icon">🚚</span>
-          <h3>Швидка доставка</h3>
-          <p>Відправляємо ваше замовлення в день оплати по всій Україні.</p>
+
+        <!-- Animated columns -->
+        <div class="products__columns">
+          <!-- Column 1 — scrolls up -->
+          <div class="products__col products__col--up">
+            <div class="product-card" data-brand="zara">
+              <div class="product-card__img-wrap">
+                <div class="product-card__img product-card__img--1"></div>
+                <div class="product-card__overlay">
+                  <a
+                    href="https://www.instagram.com/silior.store/"
+                    target="_blank"
+                    class="product-card__cta"
+                    >Замовити</a
+                  >
+                </div>
+              </div>
+              <div class="product-card__info">
+                <span class="product-card__brand">Zara</span>
+                <h3 class="product-card__name">Gardenia</h3>
+                <div class="product-card__price-row">
+                  <span class="product-card__price">від 320 грн</span>
+                  <span class="product-card__badge">🔥 Хіт</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-card" data-brand="vs">
+              <div class="product-card__img-wrap">
+                <div class="product-card__img product-card__img--2"></div>
+                <div class="product-card__overlay">
+                  <a
+                    href="https://www.instagram.com/silior.store/"
+                    target="_blank"
+                    class="product-card__cta"
+                    >Замовити</a
+                  >
+                </div>
+              </div>
+              <div class="product-card__info">
+                <span class="product-card__brand">Victoria's Secret</span>
+                <h3 class="product-card__name">Bombshell</h3>
+                <div class="product-card__price-row">
+                  <span class="product-card__price">від 450 грн</span>
+                  <span class="product-card__badge product-card__badge--new"
+                    >Новинка</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="product-card" data-brand="pink">
+              <div class="product-card__img-wrap">
+                <div class="product-card__img product-card__img--3"></div>
+                <div class="product-card__overlay">
+                  <a
+                    href="https://www.instagram.com/silior.store/"
+                    target="_blank"
+                    class="product-card__cta"
+                    >Замовити</a
+                  >
+                </div>
+              </div>
+              <div class="product-card__info">
+                <span class="product-card__brand">Pink</span>
+                <h3 class="product-card__name">Fresh & Clean</h3>
+                <div class="product-card__price-row">
+                  <span class="product-card__price">від 280 грн</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-card" data-brand="zara">
+              <div class="product-card__img-wrap">
+                <div class="product-card__img product-card__img--4"></div>
+                <div class="product-card__overlay">
+                  <a
+                    href="https://www.instagram.com/silior.store/"
+                    target="_blank"
+                    class="product-card__cta"
+                    >Замовити</a
+                  >
+                </div>
+              </div>
+              <div class="product-card__info">
+                <span class="product-card__brand">Zara</span>
+                <h3 class="product-card__name">Tobacco Collection</h3>
+                <div class="product-card__price-row">
+                  <span class="product-card__price">від 340 грн</span>
+                  <span class="product-card__badge">🔥 Хіт</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 2 — scrolls down -->
+          <div class="products__col products__col--down">
+            <div class="product-card" data-brand="vs">
+              <div class="product-card__img-wrap">
+                <div class="product-card__img product-card__img--5"></div>
+                <div class="product-card__overlay">
+                  <a
+                    href="https://www.instagram.com/silior.store/"
+                    target="_blank"
+                    class="product-card__cta"
+                    >Замовити</a
+                  >
+                </div>
+              </div>
+              <div class="product-card__info">
+                <span class="product-card__brand">Victoria's Secret</span>
+                <h3 class="product-card__name">Love Spell</h3>
+                <div class="product-card__price-row">
+                  <span class="product-card__price">від 390 грн</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-card" data-brand="zara">
+              <div class="product-card__img-wrap">
+                <div class="product-card__img product-card__img--6"></div>
+                <div class="product-card__overlay">
+                  <a
+                    href="https://www.instagram.com/silior.store/"
+                    target="_blank"
+                    class="product-card__cta"
+                    >Замовити</a
+                  >
+                </div>
+              </div>
+              <div class="product-card__info">
+                <span class="product-card__brand">Zara</span>
+                <h3 class="product-card__name">Gourmand Collection</h3>
+                <div class="product-card__price-row">
+                  <span class="product-card__price">від 295 грн</span>
+                  <span class="product-card__badge product-card__badge--new"
+                    >Новинка</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="product-card" data-brand="pink">
+              <div class="product-card__img-wrap">
+                <div class="product-card__img product-card__img--7"></div>
+                <div class="product-card__overlay">
+                  <a
+                    href="https://www.instagram.com/silior.store/"
+                    target="_blank"
+                    class="product-card__cta"
+                    >Замовити</a
+                  >
+                </div>
+              </div>
+              <div class="product-card__info">
+                <span class="product-card__brand">Pink</span>
+                <h3 class="product-card__name">Warm & Cozy</h3>
+                <div class="product-card__price-row">
+                  <span class="product-card__price">від 260 грн</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-card" data-brand="vs">
+              <div class="product-card__img-wrap">
+                <div class="product-card__img product-card__img--8"></div>
+                <div class="product-card__overlay">
+                  <a
+                    href="https://www.instagram.com/silior.store/"
+                    target="_blank"
+                    class="product-card__cta"
+                    >Замовити</a
+                  >
+                </div>
+              </div>
+              <div class="product-card__info">
+                <span class="product-card__brand">Victoria's Secret</span>
+                <h3 class="product-card__name">Heavenly</h3>
+                <div class="product-card__price-row">
+                  <span class="product-card__price">від 410 грн</span>
+                  <span class="product-card__badge">🔥 Хіт</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 3 — scrolls up -->
+          <div class="products__col products__col--up products__col--third">
+            <div class="product-card" data-brand="pink">
+              <div class="product-card__img-wrap">
+                <div class="product-card__img product-card__img--9"></div>
+                <div class="product-card__overlay">
+                  <a
+                    href="https://www.instagram.com/silior.store/"
+                    target="_blank"
+                    class="product-card__cta"
+                    >Замовити</a
+                  >
+                </div>
+              </div>
+              <div class="product-card__info">
+                <span class="product-card__brand">Pink</span>
+                <h3 class="product-card__name">Sun Kissed</h3>
+                <div class="product-card__price-row">
+                  <span class="product-card__price">від 270 грн</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-card" data-brand="zara">
+              <div class="product-card__img-wrap">
+                <div class="product-card__img product-card__img--10"></div>
+                <div class="product-card__overlay">
+                  <a
+                    href="https://www.instagram.com/silior.store/"
+                    target="_blank"
+                    class="product-card__cta"
+                    >Замовити</a
+                  >
+                </div>
+              </div>
+              <div class="product-card__info">
+                <span class="product-card__brand">Zara</span>
+                <h3 class="product-card__name">Gold Jasmine</h3>
+                <div class="product-card__price-row">
+                  <span class="product-card__price">від 350 грн</span>
+                  <span class="product-card__badge product-card__badge--new"
+                    >Новинка</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="product-card" data-brand="vs">
+              <div class="product-card__img-wrap">
+                <div class="product-card__img product-card__img--11"></div>
+                <div class="product-card__overlay">
+                  <a
+                    href="https://www.instagram.com/silior.store/"
+                    target="_blank"
+                    class="product-card__cta"
+                    >Замовити</a
+                  >
+                </div>
+              </div>
+              <div class="product-card__info">
+                <span class="product-card__brand">Victoria's Secret</span>
+                <h3 class="product-card__name">Very Sexy</h3>
+                <div class="product-card__price-row">
+                  <span class="product-card__price">від 430 грн</span>
+                  <span class="product-card__badge">🔥 Хіт</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-card" data-brand="zara">
+              <div class="product-card__img-wrap">
+                <div class="product-card__img product-card__img--12"></div>
+                <div class="product-card__overlay">
+                  <a
+                    href="https://www.instagram.com/silior.store/"
+                    target="_blank"
+                    class="product-card__cta"
+                    >Замовити</a
+                  >
+                </div>
+              </div>
+              <div class="product-card__info">
+                <span class="product-card__brand">Zara</span>
+                <h3 class="product-card__name">Night Pour Homme</h3>
+                <div class="product-card__price-row">
+                  <span class="product-card__price">від 310 грн</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="products__cta reveal">
+          <a
+            class="btn btn--primary"
+            href="https://www.instagram.com/silior.store/"
+            target="_blank"
+            rel="noopener"
+          >
+            Весь каталог в Instagram
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- Catalog Section -->
-    <section id="catalog" class="catalog">
+    <!-- ============================================================
+       WHY CHOOSE US SECTION — photo collage + benefits
+  ============================================================ -->
+    <section class="why" id="why">
       <div class="container">
-        <h2 class="section-title" data-aos="fade-down">Популярні аромати</h2>
-        <div class="product-grid">
-          <!-- Product 1 -->
-          <div class="product-card" data-aos="zoom-in">
-            <div class="product-img">
-              <img
-                src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&q=80&w=500"
-                alt="Zara"
-              />
+        <div class="why__grid">
+          <!-- Left — photo collage -->
+          <div class="why__collage reveal reveal--left">
+            <div class="collage__card collage__card--1">
+              <div class="collage__img collage__img--1"></div>
             </div>
-            <h3>Zara Deep Garden</h3>
-            <p class="category">Eau de parfum | 100ml</p>
-            <p class="price">₴650 <span class="old-price">₴950</span></p>
-            <a href="https://www.instagram.com/silior.store/" class="btn-buy"
-              >Замовити в Direct</a
-            >
+            <div class="collage__card collage__card--2">
+              <div class="collage__img collage__img--2"></div>
+            </div>
+            <div class="collage__card collage__card--3">
+              <div class="collage__img collage__img--3"></div>
+            </div>
+            <div class="collage__badge">
+              <span class="collage__badge-num">500+</span>
+              <span class="collage__badge-text">клієнтів задоволено</span>
+            </div>
           </div>
-          <!-- Product 2 -->
-          <div class="product-card" data-aos="zoom-in" data-aos-delay="100">
-            <div class="product-img">
-              <img
-                src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&q=80&w=500"
-                alt="VS"
-              />
-            </div>
-            <h3>Victoria's Secret Bombshell</h3>
-            <p class="category">Body Mist | 250ml</p>
-            <p class="price">₴720 <span class="old-price">₴1100</span></p>
-            <a href="https://www.instagram.com/silior.store/" class="btn-buy"
-              >Замовити в Direct</a
-            >
-          </div>
-          <!-- Product 3 -->
-          <div class="product-card" data-aos="zoom-in" data-aos-delay="200">
-            <div class="product-img">
-              <img
-                src="https://image-thumbs.shafastatic.net/587676071_310_430"
-                alt="Pink"
-              />
-            </div>
-            <h3>PINK Fresh & Clean</h3>
-            <p class="category">Body Mist | 250ml</p>
-            <p class="price">₴690 <span class="old-price">₴980</span></p>
+
+          <!-- Right — text -->
+          <div class="why__content reveal reveal--right">
+            <span class="section-tag">Чому обирають нас</span>
+            <h2 class="section-title">Якість без компромісів</h2>
+            <p class="why__desc">
+              Ми продаємо виключно оригінальну парфумерію від перевірених
+              постачальників. Наша мета — зробити преміальні аромати доступними
+              для кожного.
+            </p>
+
+            <ul class="why__list">
+              <li class="why__item">
+                <span class="why__icon">🚀</span>
+                <div>
+                  <strong>Швидка доставка 1–2 дні</strong>
+                  <p>Відправляємо Новою Поштою по всій Україні</p>
+                </div>
+              </li>
+              <li class="why__item">
+                <span class="why__icon">✅</span>
+                <div>
+                  <strong>Перевірена якість</strong>
+                  <p>Тільки оригінальна парфумерія від офіційних брендів</p>
+                </div>
+              </li>
+              <li class="why__item">
+                <span class="why__icon">🔄</span>
+                <div>
+                  <strong>Обмін без проблем</strong>
+                  <p>Гарантуємо обмін або повернення без зайвих питань</p>
+                </div>
+              </li>
+              <li class="why__item">
+                <span class="why__icon">💬</span>
+                <div>
+                  <strong>Відповідаємо протягом 10 хвилин</strong>
+                  <p>Завжди на зв'язку в Instagram Direct</p>
+                </div>
+              </li>
+            </ul>
+
             <a
-              href="https://shafa.ua/cosmetics/parfyumeriya/sprei/102949059-parfumovaniy-spryay-victoria_s-secret-pink-fresh-clean"
-              class="btn-buy"
-              >Замовити в Direct</a
+              class="btn btn--primary"
+              href="https://www.instagram.com/silior.store/"
+              target="_blank"
+              rel="noopener"
+            >
+              Написати нам
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+       ADVANTAGES SECTION — feature cards
+  ============================================================ -->
+    <section class="advantages" id="advantages">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Наші переваги</span>
+          <h2 class="section-title">Чому це вигідно</h2>
+        </div>
+        <div class="advantages__grid">
+          <div class="adv-card reveal" style="--delay: 0ms">
+            <div class="adv-card__icon">💸</div>
+            <h3 class="adv-card__title">Найнижчі ціни</h3>
+            <p class="adv-card__desc">
+              Прямі постачання без посередників дозволяють нам пропонувати ціни
+              значно нижче ринкових
+            </p>
+          </div>
+          <div class="adv-card reveal" style="--delay: 100ms">
+            <div class="adv-card__icon">📦</div>
+            <h3 class="adv-card__title">Швидка доставка</h3>
+            <p class="adv-card__desc">
+              Відправляємо щодня. Отримуєте замовлення вже за 1–2 робочі дні по
+              всій Україні
+            </p>
+          </div>
+          <div class="adv-card reveal" style="--delay: 200ms">
+            <div class="adv-card__icon">🛡️</div>
+            <h3 class="adv-card__title">Надійність</h3>
+            <p class="adv-card__desc">
+              500+ задоволених клієнтів. Реальні відгуки та чесна репутація в
+              Instagram
+            </p>
+          </div>
+          <div class="adv-card reveal" style="--delay: 300ms">
+            <div class="adv-card__icon">🎀</div>
+            <h3 class="adv-card__title">Подарункове пакування</h3>
+            <p class="adv-card__desc">
+              Красиве пакування для особливого подарунку — попросіть про це у
+              Direct
+            </p>
+          </div>
+          <div class="adv-card reveal" style="--delay: 400ms">
+            <div class="adv-card__icon">💎</div>
+            <h3 class="adv-card__title">Тільки оригінал</h3>
+            <p class="adv-card__desc">
+              Жодних підробок. Перевіряємо кожен товар перед відправкою
+            </p>
+          </div>
+          <div class="adv-card reveal" style="--delay: 500ms">
+            <div class="adv-card__icon">🌸</div>
+            <h3 class="adv-card__title">Широкий вибір</h3>
+            <p class="adv-card__desc">
+              Zara, Pink, Victoria's Secret — для неї, для нього та для
+              особливих моментів
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+       REVIEWS SECTION — testimonials slider
+  ============================================================ -->
+    <section class="reviews" id="reviews">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Відгуки</span>
+          <h2 class="section-title">Що кажуть клієнти</h2>
+          <p class="section-sub">Реальні відгуки від наших покупців</p>
+        </div>
+
+        <div class="reviews__slider reveal">
+          <div class="reviews__track" id="reviewsTrack">
+            <div class="review-card">
+              <div class="review-card__stars">★★★★★</div>
+              <p class="review-card__text">
+                "Замовляла Bombshell від Victoria's Secret — прийшло швидко,
+                упакування ідеальне, аромат справжній. Дуже задоволена якістю!"
+              </p>
+              <div class="review-card__author">
+                <div class="review-card__avatar">А</div>
+                <div>
+                  <strong>Анна К.</strong>
+                  <span>Київ</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="review-card">
+              <div class="review-card__stars">★★★★★</div>
+              <p class="review-card__text">
+                "Брала Zara Gardenia — ціна набагато нижча ніж в магазині, а
+                якість та сама. Тепер замовляю тільки тут!"
+              </p>
+              <div class="review-card__author">
+                <div class="review-card__avatar">М</div>
+                <div>
+                  <strong>Марина Л.</strong>
+                  <span>Харків</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="review-card">
+              <div class="review-card__stars">★★★★★</div>
+              <p class="review-card__text">
+                "Відповіли за 5 хвилин, все детально пояснили. Посилка прийшла
+                наступного дня. Рекомендую всім!"
+              </p>
+              <div class="review-card__author">
+                <div class="review-card__avatar">О</div>
+                <div>
+                  <strong>Олена В.</strong>
+                  <span>Дніпро</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="review-card">
+              <div class="review-card__stars">★★★★★</div>
+              <p class="review-card__text">
+                "Купила Pink Fresh & Clean як подарунок — дівчата в захваті!
+                Буду купувати ще. Ціни просто неймовірні."
+              </p>
+              <div class="review-card__author">
+                <div class="review-card__avatar">Н</div>
+                <div>
+                  <strong>Наталія С.</strong>
+                  <span>Одеса</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="review-card">
+              <div class="review-card__stars">★★★★★</div>
+              <p class="review-card__text">
+                "Перше замовлення зробив скептично, але все сподобалось.
+                Heavenly від VS — чудовий аромат, оригінал 100%."
+              </p>
+              <div class="review-card__author">
+                <div class="review-card__avatar">В</div>
+                <div>
+                  <strong>Василь Р.</strong>
+                  <span>Львів</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slider controls -->
+          <div class="reviews__controls">
+            <button
+              class="reviews__btn reviews__btn--prev"
+              id="reviewsPrev"
+              aria-label="Попередній"
+            >
+              ‹
+            </button>
+            <div class="reviews__dots" id="reviewsDots"></div>
+            <button
+              class="reviews__btn reviews__btn--next"
+              id="reviewsNext"
+              aria-label="Наступний"
+            >
+              ›
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+       HOW TO ORDER SECTION — step timeline
+  ============================================================ -->
+    <section class="how-to-order" id="how-to-order">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Замовлення</span>
+          <h2 class="section-title">Як замовити?</h2>
+          <p class="section-sub">Всього 4 простих кроки до вашого аромату</p>
+        </div>
+
+        <div class="steps">
+          <div class="step reveal" style="--delay: 0ms">
+            <div class="step__number">01</div>
+            <div class="step__icon">📱</div>
+            <div class="step__content">
+              <h3 class="step__title">Перейдіть в Instagram</h3>
+              <p class="step__desc">
+                Натисніть кнопку «Перейти в Instagram» та відкрийте наш профіль
+              </p>
+            </div>
+            <div class="step__connector"></div>
+          </div>
+
+          <div class="step reveal" style="--delay: 150ms">
+            <div class="step__number">02</div>
+            <div class="step__icon">✉️</div>
+            <div class="step__content">
+              <h3 class="step__title">Напишіть у Direct</h3>
+              <p class="step__desc">
+                Вкажіть назву парфуму, кількість та ваше місто для розрахунку
+                доставки
+              </p>
+            </div>
+            <div class="step__connector"></div>
+          </div>
+
+          <div class="step reveal" style="--delay: 300ms">
+            <div class="step__number">03</div>
+            <div class="step__icon">✅</div>
+            <div class="step__content">
+              <h3 class="step__title">Отримайте підтвердження</h3>
+              <p class="step__desc">
+                Відповідаємо протягом 10 хвилин. Узгоджуємо деталі та спосіб
+                оплати
+              </p>
+            </div>
+            <div class="step__connector"></div>
+          </div>
+
+          <div class="step reveal" style="--delay: 450ms">
+            <div class="step__number">04</div>
+            <div class="step__icon">🎁</div>
+            <div class="step__content">
+              <h3 class="step__title">Отримайте замовлення</h3>
+              <p class="step__desc">
+                Відправляємо Новою Поштою. Ваш аромат у вас вже за 1–2 дні!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="steps__cta reveal">
+          <a
+            class="btn btn--primary btn--lg"
+            href="https://www.instagram.com/silior.store/"
+            target="_blank"
+            rel="noopener"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+            >
+              <rect
+                x="2"
+                y="2"
+                width="20"
+                height="20"
+                rx="5"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <circle
+                cx="12"
+                cy="12"
+                r="4.5"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" />
+            </svg>
+            Замовити зараз
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+       CTA SECTION — full-screen with animated background
+  ============================================================ -->
+    <section class="cta-section">
+      <div class="cta-section__bg">
+        <div class="cta-orb cta-orb--1"></div>
+        <div class="cta-orb cta-orb--2"></div>
+        <div class="cta-orb cta-orb--3"></div>
+      </div>
+      <div class="container">
+        <div class="cta-section__inner reveal">
+          <span class="section-tag section-tag--light"
+            >Готові обрати свій аромат?</span
+          >
+          <h2 class="cta-section__title">
+            Знайдіть свій<br /><em>ідеальний аромат</em>
+          </h2>
+          <p class="cta-section__sub">
+            Переходьте в Instagram та отримайте консультацію прямо зараз.
+            Відповідаємо протягом 10 хвилин!
+          </p>
+          <a
+            class="btn btn--white btn--lg"
+            href="https://www.instagram.com/silior.store/"
+            target="_blank"
+            rel="noopener"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+            >
+              <rect
+                x="2"
+                y="2"
+                width="20"
+                height="20"
+                rx="5"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <circle
+                cx="12"
+                cy="12"
+                r="4.5"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" />
+            </svg>
+            Перейти в Instagram
+          </a>
+          <p class="cta-section__note">
+            Безкоштовна консультація · Доставка 1–2 дні
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+       FAQ SECTION — animated accordion
+  ============================================================ -->
+    <section class="faq" id="faq">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">FAQ</span>
+          <h2 class="section-title">Часті запитання</h2>
+        </div>
+
+        <div class="faq__list reveal">
+          <div class="faq__item">
+            <button class="faq__q" aria-expanded="false">
+              <span>Чи оригінальні парфуми?</span>
+              <span class="faq__icon">+</span>
+            </button>
+            <div class="faq__a">
+              <p>
+                Так, ми продаємо виключно оригінальну парфумерію від офіційних
+                брендів — Zara, Pink та Victoria's Secret. Кожен товар проходить
+                перевірку перед відправкою. У нас немає жодних підробок або
+                аналогів.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <button class="faq__q" aria-expanded="false">
+              <span>Скільки часу займає доставка?</span>
+              <span class="faq__icon">+</span>
+            </button>
+            <div class="faq__a">
+              <p>
+                Відправляємо замовлення щодня через Нову Пошту. Зазвичай
+                доставка займає 1–2 робочих дні по всій Україні. Трекінг-номер
+                відправляємо одразу після відправки.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <button class="faq__q" aria-expanded="false">
+              <span>Чи можна зробити обмін або повернення?</span>
+              <span class="faq__icon">+</span>
+            </button>
+            <div class="faq__a">
+              <p>
+                Так! Якщо вас щось не влаштувало — напишіть нам у Direct. Ми
+                допоможемо з обміном або поверненням без зайвих питань. Клієнт
+                завжди на першому місці.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <button class="faq__q" aria-expanded="false">
+              <span>Які способи оплати?</span>
+              <span class="faq__icon">+</span>
+            </button>
+            <div class="faq__a">
+              <p>
+                Приймаємо оплату на карту Приватбанк або Монобанк. Також можлива
+                оплата при отриманні (накладений платіж через Нову Пошту).
+                Деталі уточнюйте у Direct при оформленні замовлення.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <button class="faq__q" aria-expanded="false">
+              <span>Чи є гарантія на продукцію?</span>
+              <span class="faq__icon">+</span>
+            </button>
+            <div class="faq__a">
+              <p>
+                Так, ми гарантуємо оригінальність кожного товару. Якщо у вас
+                виникнуть будь-які сумніви щодо якості — звертайтесь до нас, ми
+                розберемось та знайдемо рішення.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+       CONTACTS SECTION
+  ============================================================ -->
+    <section class="contacts" id="contacts">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Контакти</span>
+          <h2 class="section-title">Зв'яжіться з нами</h2>
+        </div>
+
+        <div class="contacts__grid">
+          <div class="contact-card reveal" style="--delay: 0ms">
+            <div class="contact-card__icon">📍</div>
+            <h3 class="contact-card__title">Місто</h3>
+            <p class="contact-card__val">Київ, Україна</p>
+          </div>
+          <div class="contact-card reveal" style="--delay: 100ms">
+            <div class="contact-card__icon">📱</div>
+            <h3 class="contact-card__title">Телефон</h3>
+            <a
+              class="contact-card__val contact-card__val--link"
+              href="tel:+380991234567"
+              >+38 (099) 123-45-67</a
+            >
+          </div>
+          <div class="contact-card reveal" style="--delay: 200ms">
+            <div class="contact-card__icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                width="28"
+                height="28"
+              >
+                <rect
+                  x="2"
+                  y="2"
+                  width="20"
+                  height="20"
+                  rx="5"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="4.5"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" />
+              </svg>
+            </div>
+            <h3 class="contact-card__title">Instagram</h3>
+            <a
+              class="contact-card__val contact-card__val--link"
+              href="https://www.instagram.com/silior.store/"
+              target="_blank"
+              rel="noopener"
+              >@silior.store</a
             >
           </div>
         </div>
       </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-      <div class="container about-flex">
-        <div class="about-text" data-aos="fade-right">
-          <h2>Чому обирають Silior?</h2>
-          <p>
-            Ми створили Silior Store, тому що віримо: якісний парфум не повинен
-            коштувати як цілий капітал. Наша місія — зробити преміальні аромати
-            Zara та Victoria's Secret доступними для кожної дівчини в Україні.
-          </p>
-          <p>
-            Ми ретельно відбираємо кожен флакон і гарантуємо стійкість та шлейф,
-            які підкорять оточуючих.
-          </p>
-        </div>
-        <div class="about-image" data-aos="fade-left">
-          <img
-            src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&q=80&w=800"
-            alt="About Silior"
-          />
-        </div>
-      </div>
-    </section>
-
-    <!-- Reviews Section -->
-    <section class="reviews">
+    <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+    <footer class="footer">
       <div class="container">
-        <h2 class="section-title">Відгуки наших клієнтів</h2>
-        <div class="reviews-grid">
-          <div class="review-card" data-aos="flip-left">
-            <p>
-              "Вже втретє замовляю тут Zara. Ціна просто вогонь, а аромат
-              тримається весь день! Дякую!"
+        <div class="footer__inner">
+          <div class="footer__brand">
+            <a class="logo" href="#home">
+              <span class="logo__icon">✦</span>
+              <span class="logo__text"
+                >silior<span class="logo__dot">.store</span></span
+              >
+            </a>
+            <p class="footer__tagline">
+              Оригінальні парфуми за доступною ціною
             </p>
-            <strong>— Олена, Київ</strong>
           </div>
-          <div class="review-card" data-aos="flip-left" data-aos-delay="100">
-            <p>
-              "Місти від Victoria's Secret оригінальні, дуже задоволена швидкою
-              доставкою."
-            </p>
-            <strong>— Марина, Львів</strong>
+
+          <div class="footer__links">
+            <a href="#products">Продукти</a>
+            <a href="#why">Чому ми</a>
+            <a href="#how-to-order">Як замовити</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contacts">Контакти</a>
+          </div>
+
+          <div class="footer__social">
+            <a
+              class="footer__social-link"
+              href="https://www.instagram.com/silior.store/"
+              target="_blank"
+              rel="noopener"
+              aria-label="Instagram"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="22"
+              >
+                <rect
+                  x="2"
+                  y="2"
+                  width="20"
+                  height="20"
+                  rx="5"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="4.5"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" />
+              </svg>
+              @silior.store
+            </a>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- FAQ Section -->
-    <section id="faq" class="faq">
-      <div class="container">
-        <h2 class="section-title">Часті запитання</h2>
-        <div class="accordion">
-          <div class="accordion-item" data-aos="fade-up">
-            <div class="accordion-header">
-              Це оригінальна продукція? <span>+</span>
-            </div>
-            <div class="accordion-body">
-              Так, ми закуповуємо продукцію в офіційних магазинах брендів у
-              Європі.
-            </div>
-          </div>
-          <div class="accordion-item" data-aos="fade-up">
-            <div class="accordion-header">
-              Як зробити замовлення? <span>+</span>
-            </div>
-            <div class="accordion-body">
-              Просто натисніть кнопку під товаром, і ви перейдете в наш
-              Instagram Direct для оформлення.
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer id="contacts">
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-logo">SILIOR.STORE</div>
-          <div class="footer-socials">
-            <a href="https://www.instagram.com/silior.store/">Instagram</a>
-            <a href="#">Telegram</a>
-          </div>
-          <p>&copy; 2024 Silior Store. Всі права захищено.</p>
+        <div class="footer__bottom">
+          <p>© 2024 silior.store. Всі права захищені.</p>
+          <p>+38 (099) 123-45-67 · Київ, Україна</p>
         </div>
       </div>
     </footer>
 
-    <!-- Scripts -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
