@@ -1196,6 +1196,10 @@ section {
     background var(--tr-base);
 }
 
+.why__icon svg {
+  color: var(--clr-primary);
+}
+
 .why__item:hover .why__icon {
   transform: scale(1.1) rotate(-5deg);
   background: rgba(89, 43, 82, 0.15);
@@ -1250,6 +1254,12 @@ section {
   margin-bottom: 1rem;
   display: block;
   transition: transform var(--tr-base);
+
+  svg {
+    height: 2.8125rem;
+    width: 2.8125rem;
+    color: var(--clr-primary);
+  }
 }
 
 .adv-card:hover .adv-card__icon {
@@ -1467,6 +1477,12 @@ section {
   margin-bottom: 1.25rem;
   box-shadow: var(--shadow-sm);
   transition: all var(--tr-base);
+
+  svg {
+    width: 2rem;
+    height: 2rem;
+    color: var(--clr-primary);
+  }
 }
 
 .step:hover .step__icon {
@@ -1474,6 +1490,10 @@ section {
   border-color: var(--clr-primary);
   transform: scale(1.1);
   box-shadow: var(--shadow-md);
+
+  svg {
+    color: var(--clr-white);
+  }
 }
 
 .step__title {
@@ -1718,6 +1738,11 @@ section {
   justify-content: center;
   height: 48px;
   color: var(--clr-primary);
+  svg {
+    width: 2rem;
+    height: 2rem;
+    color: var(--clr-primary);
+  }
 }
 
 .contact-card__title {
