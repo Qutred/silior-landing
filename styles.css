@@ -1022,6 +1022,14 @@ section {
   border-radius: var(--r-full);
   background: rgba(212, 168, 83, 0.12);
   color: var(--clr-gold);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  svg {
+    width: 1.5em;
+    height: 1.5em;
+  }
 }
 
 .product-card__badge--new {
